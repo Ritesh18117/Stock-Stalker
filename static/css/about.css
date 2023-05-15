@@ -1,0 +1,13 @@
+#about{
+    font-size: 1.4rem;;
+}
+
+#cards-div{
+    justify-content: space-evenly;
+}
+
+.card-body img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}

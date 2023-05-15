@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/stock.css">    
+        <title>Stock Stalker</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="./logo.png" width="60" height="60" class="d-inline-block align-top rounded rounded-7" alt="Logo">
+          <span class="logo-text" style="font-size: 1.8rem; margin-left: 10px;">Stock-Stalker</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 1.7rem;">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/stocks">Stocks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <Section class="d-flex justify-content-center flex-column">
+        <div id="us-stocks" class="container shadow hover" style="height: 40rem; width: 75rem; margin-top: 30px;">
+            <h1>US STOCKS</h1>
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets</span></a> on TradingView</div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+                {
+                "symbols": [
+                [
+                    "Apple",
+                    "AAPL|1D"
+                ],
+                [
+                    "Google",
+                    "GOOGL|1D"
+                ],
+                [
+                    "Microsoft",
+                    "MSFT|1D"
+                ]
+                ],
+                "chartOnly": false,
+                "width": "100%",
+                "height": "90%",
+                "locale": "en",
+                "colorTheme": "light",
+                "autosize": true,
+                "showVolume": false,
+                "showMA": false,
+                "hideDateRanges": false,
+                "hideMarketStatus": false,
+                "hideSymbolLogo": false,
+                "scalePosition": "right",
+                "scaleMode": "Normal",
+                "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                "fontSize": "10",
+                "noTimeScale": false,
+                "valuesTracking": "1",
+                "changeMode": "price-and-percent",
+                "chartType": "area",
+                "maLineColor": "#2962FF",
+                "maLineWidth": 1,
+                "maLength": 9,
+                "lineWidth": 2,
+                "lineType": 0,
+                "dateRanges": [
+                "1d|1",
+                "1m|30",
+                "3m|60",
+                "12m|1D",
+                "60m|1W",
+                "all|1M"
+                ]
+            }
+                </script>
+            </div>
+      <!-- TradingView Widget END -->
+        </div>
+      </Section>
+      <Section class="d-flex justify-content-center flex-column">
+        <div id="crpyto" class="container shadow hover" style="height: 40rem; width: 75rem; margin-top: 30px;">
+            <h1>CRYPTO </h1>
+                            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets</span></a> on TradingView</div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+                {
+                "symbols": [
+                [
+                    "BINANCE:BTCUSDT|1D"
+                ],
+                [
+                    "BINANCE:ETHUSDT|1D"
+                ],
+                [
+                    "CRYPTOCAP:DOGE|1D"
+                ]
+                ],
+                "chartOnly": false,
+                "width": "100%",
+                "height": "96%",
+                "locale": "en",
+                "colorTheme": "light",
+                "autosize": true,
+                "showVolume": false,
+                "showMA": false,
+                "hideDateRanges": false,
+                "hideMarketStatus": false,
+                "hideSymbolLogo": false,
+                "scalePosition": "right",
+                "scaleMode": "Normal",
+                "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                "fontSize": "10",
+                "noTimeScale": false,
+                "valuesTracking": "1",
+                "changeMode": "price-and-percent",
+                "chartType": "area",
+                "maLineColor": "#2962FF",
+                "maLineWidth": 1,
+                "maLength": 9,
+                "lineWidth": 2,
+                "lineType": 0,
+                "dateRanges": [
+                "1d|1",
+                "1m|30",
+                "3m|60",
+                "12m|1D",
+                "60m|1W",
+                "all|1M"
+                ]
+            }
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+        </div>
+      </Section>
+      <section class="d-flex align-items-center justify-content-center flex-column" style="margin-top: 30px; margin-bottom: 30px;">
+        <div class="container shadow hover" style="height:45rem; width: 80rem;">
+            <h1>CANDLE CHART</h1>
+            <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div id="tradingview_9fc88"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets</span></a> on TradingView</div>
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                new TradingView.widget(
+                {
+                "width": 1100,
+                "height": 650,
+                "symbol": "NASDAQ:AMZN",
+                "interval": "D",
+                "timezone": "Etc/UTC",
+                "theme": "light",
+                "style": "1",
+                "locale": "en",
+                "toolbar_bg": "#f1f3f6",
+                "enable_publishing": false,
+                "allow_symbol_change": true,
+                "container_id": "tradingview_9fc88"
+            }
+                );
+                </script>
+            </div>
+            <!-- TradingView Widget END -->
+        </div>
+        <div style="margin-top: 30px;">
+            <h2>Analyse your stocks with latest Data Analystics tools!!!</h2>
+        </div>
+      </section>
+
+      <section id="pocket-charts" class="d-flex justify-content-center flex-wrap">
+        <div class="container d-flex">
+            <div>
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets</span></a> on TradingView</div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+                    {
+                    "colorTheme": "light",
+                    "dateRange": "12M",
+                    "showChart": true,
+                    "locale": "en",
+                    "largeChartUrl": "",
+                    "isTransparent": false,
+                    "showSymbolLogo": true,
+                    "showFloatingTooltip": false,
+                    "width": "400",
+                    "height": "660",
+                    "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+                    "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+                    "gridLineColor": "rgba(240, 243, 250, 0)",
+                    "scaleFontColor": "rgba(106, 109, 120, 1)",
+                    "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+                    "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
+                    "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+                    "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
+                    "symbolActiveColor": "rgba(41, 98, 255, 0.12)",
+                    "tabs": [
+                    {
+                        "title": "Indices",
+                        "symbols": [
+                        {
+                            "s": "INDEX:DEU40",
+                            "d": "DAX Index"
+                        },
+                        {
+                            "s": "FOREXCOM:UKXGBP",
+                            "d": "UK 100"
+                        },
+                        {
+                            "s": "NASDAQ:AAPL"
+                        },
+                        {
+                            "s": "NASDAQ:AMZN"
+                        },
+                        {
+                            "s": "NASDAQ:MSFT"
+                        }
+                        ],
+                        "originalTitle": "Indices"
+                    },
+                    {
+                        "title": "Futures",
+                        "symbols": [
+                        {
+                            "s": "CME_MINI:ES1!",
+                            "d": "S&P 500"
+                        },
+                        {
+                            "s": "CME:6E1!",
+                            "d": "Euro"
+                        },
+                        {
+                            "s": "COMEX:GC1!",
+                            "d": "Gold"
+                        },
+                        {
+                            "s": "NYMEX:CL1!",
+                            "d": "Crude Oil"
+                        },
+                        {
+                            "s": "NYMEX:NG1!",
+                            "d": "Natural Gas"
+                        },
+                        {
+                            "s": "CBOT:ZC1!",
+                            "d": "Corn"
+                        }
+                        ],
+                        "originalTitle": "Futures"
+                    },
+                    {
+                        "title": "Bonds",
+                        "symbols": [
+                        {
+                            "s": "CME:GE1!",
+                            "d": "Eurodollar"
+                        },
+                        {
+                            "s": "CBOT:ZB1!",
+                            "d": "T-Bond"
+                        },
+                        {
+                            "s": "CBOT:UB1!",
+                            "d": "Ultra T-Bond"
+                        },
+                        {
+                            "s": "EUREX:FGBL1!",
+                            "d": "Euro Bund"
+                        },
+                        {
+                            "s": "EUREX:FBTP1!",
+                            "d": "Euro BTP"
+                        },
+                        {
+                            "s": "EUREX:FGBM1!",
+                            "d": "Euro BOBL"
+                        }
+                        ],
+                        "originalTitle": "Bonds"
+                    },
+                    {
+                        "title": "Forex",
+                        "symbols": [
+                        {
+                            "s": "FX:EURUSD",
+                            "d": "EUR/USD"
+                        },
+                        {
+                            "s": "FX:GBPUSD",
+                            "d": "GBP/USD"
+                        },
+                        {
+                            "s": "FX:USDJPY",
+                            "d": "USD/JPY"
+                        },
+                        {
+                            "s": "FX:USDCHF",
+                            "d": "USD/CHF"
+                        },
+                        {
+                            "s": "FX:AUDUSD",
+                            "d": "AUD/USD"
+                        },
+                        {
+                            "s": "FX:USDCAD",
+                            "d": "USD/CAD"
+                        }
+                        ],
+                        "originalTitle": "Forex"
+                    },
+                    {
+                        "title": "Add tab",
+                        "symbols": []
+                    }
+                    ]
+                }
+                    </script>
+                </div>
+  <!-- TradingView Widget END -->
+            </div>
+            <div class="offset-md-1 mt-6" style="margin-top: 13rem;">
+                <h1>Overview The Market</h1>
+                <h3>Overview the market to view get the brief knowledge about the Market</h3>
+            </div>
+        </div>
+      </section>
+
+      <section class="d-flex justify-content-center flex-wrap">
+        <div class="container d-flex">
+            <div class="offset-md-1 mt-6" style="margin-top: 13rem;">
+                <h1>Stock Market Widget</h1>
+                <h3>See the top five gaining, losing, and most active stocks for the day. It updates based on current market activity – so you'll always see the most relevant stocks.</h3>
+            </div>
+            <div>
+                <!-- TradingView Widget BEGIN -->
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets</span></a> on TradingView</div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
+                {
+                "colorTheme": "light",
+                "dateRange": "12M",
+                "exchange": "US",
+                "showChart": true,
+                "locale": "en",
+                "largeChartUrl": "",
+                "isTransparent": false,
+                "showSymbolLogo": false,
+                "showFloatingTooltip": false,
+                "width": "400",
+                "height": "600",
+                "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+                "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+                "gridLineColor": "rgba(240, 243, 250, 0)",
+                "scaleFontColor": "rgba(106, 109, 120, 1)",
+                "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
+                "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
+                "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
+                "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
+                "symbolActiveColor": "rgba(41, 98, 255, 0.12)"
+            }
+                </script>
+            </div>
+  <!-- TradingView Widget END -->
+            </div>
+            
+        </div>
+      </section>
+
+      <footer class="d-flex align-items-center justify-content-center footer bg-dark text-light">
+        <div class="container" id="foot">
+          <div id="contact-div" class="row">
+            <div class="col-lg-6 mt-5">
+              <h4>About Us</h4>
+              <p>Stock Stalkers is a leading online platform dedicated to providing comprehensive information and tools for individuals interested in stock market investments. With a user-friendly interface and a wealth of resources, Stock Stalkers empowers users to make informed decisions in their investment journey.</p>
+            </div>
+            <div class="col-lg-6 mt-5">
+              <h4>Contact Us</h4>
+              <ul class="list-unstyled">
+                <li>Phone: 123-456-7890</li>
+                <li>Email: info@StockStalker.com</li>
+                <li>Address: 123 Street, City, State</li>
+              </ul>
+            </div>
+          </div>
+          <div id="copyright-div" class="row bg-dark text-light">
+            <div class="col justify-content-center d-flex align-items-center">
+              &copy; 2023 Stock Stalkers. All rights reserved.
+            </div>
+          </div>
+        </div>
+      </footer>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

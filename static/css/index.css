@@ -1,0 +1,71 @@
+#front-page{
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#bg{
+    height: 100%;
+    width: 100%;
+}
+
+#logo-div img{
+    width: 180px;
+    height: 165px;
+}
+
+#card-section{
+    height: 70vh;
+}
+
+#card-section > div{
+    width: 90%;
+}
+
+#card-div{
+    justify-content: space-evenly;
+}
+
+.card-perticular:hover{
+    width: 25.4rem;
+    height: 30.4rem;
+}
+
+#charts{
+    font-size: 3rem;
+    height: 90vh;
+    border: 1px solid black;
+}
+
+footer{
+    height: 50vh;
+}
+
+.container{
+    height: 31rem;
+    margin: 30px;
+    width: 50rem;
+}
+
+#foot{
+    height: 80%;
+}
+
+.container:hover{
+    height: 31.4rem;
+    width: 50.4rem;
+}
+
+#contact-div{
+    height: 90%;
+}
+
+#copyright-div{
+    height: 10%;
+    width: 100%;
+}
+
+iframe{
+    width: 100%;
+    height: 100%;
+}

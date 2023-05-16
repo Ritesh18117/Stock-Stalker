@@ -6,6 +6,13 @@ const app = express();
 const path = require('path');
 var request = require('request');
 
+const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
+
+// Middleware to parse the body of the incoming request
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 // Setting view engine for "path" 
 app.set('views', path.join(__dirname,'views'));
 app.set('view engine','ejs');
@@ -24,6 +31,41 @@ app.get('/about', (req,res) => {
 app.get('/contact', (req,res) => {
     res.render('contact.ejs')
 })
+
+// Contact form submission endpoint
+app.post('/contact', (req, res) => {
+    const { name, email, message } = req.body;
+  
+    // Create a transporter object using your email service details
+    const transporter = nodemailer.createTransport({
+      service: 'your_email_service',
+      auth: {
+        user: 'your_email_address',
+        pass: 'your_email_password',
+      },
+    });
+  
+    // Compose the email
+    const mailOptions = {
+      from: email,
+      to: 'your_email_address',
+      subject: 'New Contact Form Submission',
+      text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+    };
+  
+    // Send the email
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log(error);
+        res.render('contact.ejs');
+        // res.status(500).send('Error sending email');
+      } else {
+        console.log('Email sent:', info.response);
+        res.render('contact.ejs');
+        // res.send('Email sent successfully');
+      }
+    });
+  });
 
 app.get('/stocks', async (req,res) => {
     // request.get({

@@ -21,6 +21,10 @@ app.get('/about', (req,res) => {
     res.render('about.ejs')
 })
 
+app.get('/contact', (req,res) => {
+    res.render('contact.ejs')
+})
+
 app.get('/stocks', async (req,res) => {
     // request.get({
     //     url: url,

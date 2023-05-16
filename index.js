@@ -1,17 +1,10 @@
+const url = process.env.url;
+const PORT = process.env.PORT || 5000;
+
 const express = require('express');
 const app = express();
 const path = require('path');
-// const callStocks = require('./models/stocks');
-
-// =====================================================
 var request = require('request');
-
-// replace the "demo" apikey below with your own key from https://www.alphavantage.co/support/#api-key
-url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=TCS.BSE&outputsize=full&apikey=ZDGWWTV7U0CJBWNM`
-
-// =========================================
-
-
 
 // Setting view engine for "path" 
 app.set('views', path.join(__dirname,'views'));
@@ -53,6 +46,6 @@ app.get('/stocks', async (req,res) => {
 })
 
 
-app.listen(5000,() => {
+app.listen(PORT,() => {
     console.log("Connected to port 5000 !!!!");
 })

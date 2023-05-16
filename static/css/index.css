@@ -1,5 +1,6 @@
 #front-page{
-    height: 90vh;
+    max-height: 90vh;
+    min-height: 600px;
     background-size: cover;
     background-position: center;
     margin-top: 0px;
@@ -36,10 +37,6 @@
     /* font-size: 3rem; */
     height: 100%;
     border: 1px solid black;
-}
-
-footer{
-    height: 50vh;
 }
 
 .container{

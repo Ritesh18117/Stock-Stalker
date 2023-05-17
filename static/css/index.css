@@ -16,13 +16,20 @@
     height: 165px;
 }
 
-#card-section{
+#card-section,#news{
     height: 100%;
 }
 
 #card-section > div{
     width: 90%;
 }
+#news > div{
+    width: 90%;
+}
+
+/* #news{
+    border: 1px solid black;
+} */
 
 #card-div{
     justify-content: space-evenly;
@@ -49,7 +56,7 @@
     height: 80%;
 }
 
-.container:hover{
+#charts .hover:hover{
     height: 31.4rem;
     width: 50.4rem;
 }
@@ -66,4 +73,16 @@
 section{
     margin-top: 30px;
     margin-bottom: 30px;
+}
+
+#more{
+    height: 20rem;
+    width: 35px;
+    background-color: white;
+    border: none;
+    font-size: 5rem;
+}
+
+#more:hover{
+    text-decoration: none;
 }

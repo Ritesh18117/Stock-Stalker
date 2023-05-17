@@ -10,8 +10,10 @@
   "author": "Ritesh Kumar Gupta",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
+    "newsapi": "^2.4.1",
     "nodemailer": "^6.9.2",
     "nodemon": "^2.0.22",
     "path": "^0.12.7",

@@ -10,32 +10,7 @@
         <title>Stock Stalker</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="./logo.png" width="60" height="60" class="d-inline-block align-top rounded rounded-7" alt="Logo">
-          <span class="logo-text" style="font-size: 1.8rem; margin-left: 10px;">Stock-Stalker</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 1.7rem;">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/stocks">Stocks</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <%- include('./partials/nav') %>
       <Section class="d-flex justify-content-center flex-column">
         <div id="us-stocks" class="container shadow hover" style="height: 40rem; width: 75rem; margin-top: 30px;">
             <h1>US STOCKS</h1>
@@ -390,29 +365,7 @@
         </div>
       </section>
 
-      <footer class="d-flex align-items-center justify-content-center footer bg-dark text-light">
-        <div class="container" id="foot">
-          <div id="contact-div" class="row">
-            <div class="col-lg-6 mt-5">
-              <h4>About Us</h4>
-              <p>Stock Stalkers is a leading online platform dedicated to providing comprehensive information and tools for individuals interested in stock market investments. With a user-friendly interface and a wealth of resources, Stock Stalkers empowers users to make informed decisions in their investment journey.</p>
-            </div>
-            <div class="col-lg-6 mt-5">
-              <h4>Contact Us</h4>
-              <ul class="list-unstyled">
-                <li>Phone: 123-456-7890</li>
-                <li>Email: info@StockStalker.com</li>
-                <li>Address: 123 Street, City, State</li>
-              </ul>
-            </div>
-          </div>
-          <div id="copyright-div" class="row bg-dark text-light">
-            <div class="col justify-content-center d-flex align-items-center">
-              &copy; 2023 Stock Stalkers. All rights reserved.
-            </div>
-          </div>
-        </div>
-      </footer>
+      <%- include('./partials/footer') %>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>

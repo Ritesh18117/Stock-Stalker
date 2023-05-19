@@ -29,21 +29,21 @@
       <h1>MARKETS: </h1>
     </div>
     <div id="card-div" class="mt-3 d-flex flex-wrap align-items-center">
-      <div class="card card shadow hover m-3" style="width: 18rem; height:24rem">
+      <div class="card card shadow m-3" style="width: 18rem; height:24rem">
         <img class="card-img-top" src="./IndianStock.png" alt="Card image cap" style="height: 16rem;">
         <div class="card-body">
           <h3 class="card-title">Bombay Stock Exchange(BSE)</h5>
           <h2 class="card-text">SENSEX:<span style="color: green;">&#8377; 62,027</span></h2>
         </div>
       </div>
-      <div class="card card shadow hover m-3" style="width: 18rem; height:24rem">
+      <div class="card card shadow m-3" style="width: 18rem; height:24rem">
         <img class="card-img-top" src="./USStock.png" alt="Card image cap" style="height: 16rem;">
         <div class="card-body">
           <h3 class="card-title">New York Stock Exchange(NSYE)</h3>
           <h2 class="card-text">NYSE Composite: <span style="color: red;">$15,246.36</span></h2>
         </div>
       </div>
-      <div class="card card shadow hover m-3" style="width: 18rem; height:24rem">
+      <div class="card card shadow m-3" style="width: 18rem; height:24rem">
         <img class="card-img-top" src="./UKStock.png" alt="Card image cap" style="height: 16rem;">
         <div class="card-body">
           <h3 class="card-title">London Stock Exchange Group (LSEG)</h5>
@@ -51,7 +51,7 @@
           <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
       </div>
-      <div class="card card shadow hover m-3" style="width: 18rem; height:24rem">
+      <div class="card card shadow m-3" style="width: 18rem; height:24rem">
         <img class="card-img-top" src="./Crypto.png" alt="Card image cap" style="height: 16rem;">
         <div class="card-body">
           <h3 class="card-title">Crypto Currency</h5>
@@ -65,35 +65,19 @@
       <h1>NEWS: </h1>
     </div>
     <div id="card-div" class="mt-3 d-flex flex-wrap align-items-center" style="margin-bottom: 50px;">
-      <div class="card card shadow hover m-3" style="width: 18rem; height:24rem">
-        <img class="card-img-top" src="./IndianStock.png" alt="Card image cap" style="height: 16rem;">
-        <div class="card-body">
-          <h3 class="card-title">Bombay Stock Exchange(BSE)</h5>
-          <h2 class="card-text">SENSEX:<span style="color: green;">&#8377; 62,027</span></h2>
+      <% var count = 0; %>
+      <% for(let article of response.articles) { %>
+        <% if(count < 4)  { %>
+        <div id="card-particular" class="card card shadow m-3">
+          <img class="card-img-top" src="<%= article.urlToImage %>" alt="Card image cap" style="height: 16rem;">
+          <div class="card-body">
+            <h5 class="card-title"><%= article.title %></h5>
+            <!-- <h2 class="card-text">Bitcoin :<span style="color: green;"> $27005.96</span></h2> -->
+          </div>
         </div>
-      </div>
-      <div class="card card shadow hover m-3" style="width: 18rem; height:24rem">
-        <img class="card-img-top" src="./USStock.png" alt="Card image cap" style="height: 16rem;">
-        <div class="card-body">
-          <h3 class="card-title">New York Stock Exchange(NSYE)</h3>
-          <h2 class="card-text">NYSE Composite: <span style="color: red;">$15,246.36</span></h2>
-        </div>
-      </div>
-      <div class="card card shadow hover m-3" style="width: 18rem; height:24rem">
-        <img class="card-img-top" src="./UKStock.png" alt="Card image cap" style="height: 16rem;">
-        <div class="card-body">
-          <h3 class="card-title">London Stock Exchange Group (LSEG)</h5>
-          <h2 class="card-text">LSEG.L : <span style="color: green;"> &pound; 8554</span></h2>
-          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-        </div>
-      </div>
-      <div class="card card shadow hover m-3" style="width: 18rem; height:24rem">
-        <img class="card-img-top" src="./Crypto.png" alt="Card image cap" style="height: 16rem;">
-        <div class="card-body">
-          <h3 class="card-title">Crypto Currency</h5>
-          <h2 class="card-text">Bitcoin :<span style="color: green;"> $27005.96</span></h2>
-        </div>
-      </div>
+        <% count = count + 1; %>
+        <% } %>
+      <% } %>
       <div>
         <a id="more" class="hover" href="/news">
           >

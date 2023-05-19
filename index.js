@@ -28,8 +28,21 @@ app.set('view engine','ejs');
 app.use(express.static(path.join(__dirname, 'static')));
 
 
+// app.get('/', (req,res) => {
+//     res.render('index.ejs')
+// })
+
 app.get('/', (req,res) => {
-    res.render('index.ejs')
+  newsapi.v2.topHeadlines({
+    country:'in',
+    category:'business',
+  }).then(response => {
+    console.log(response.articles.title);
+    res.render('index.ejs',{response})
+  }).catch(error =>{
+    console.error(error);
+    res.status(500).json({ error: 'Internal server error' });
+  });
 })
 
 app.get('/news', (req,res) => {
